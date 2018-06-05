@@ -5,19 +5,19 @@ class Game
     @hand2 = hand2
   end
 
-  def play(hand1, hand2)
-    choices = ["Rock", "Paper", "Scissors"]
-    if hand1 == hand2
-      return "Draw"
-    elsif hand1 == "Paper" && hand2 == "Rock"
-      return "#{hand1} wins!"
-    elsif hand1 == "Rock" && hand2 == "Scissors"
-      return "#{hand1} wins!"
-    elsif hand1 == "Scissors" && hand2 == "Paper"
-      return "#{hand1} wins!"
-    elsif !choices.include?(hand1) || !choices.include?(hand2)
+  def play
+    choices = ["rock", "paper", "scissors"]
+    if @hand1 == @hand2
+      return "draw"
+    elsif @hand1 == "paper" && @hand2 == "rock"
+      return "#{@hand1} wins!"
+    elsif @hand1 == "rock" && @hand2 == "scissors"
+      return "#{@hand1} wins!"
+    elsif @hand1 == "scissors" && @hand2 == "paper"
+      return "#{@hand1} wins!"
+    elsif !choices.include?(@hand1) || !choices.include?(@hand2)
       return "NOOOOOOO wrong"
-    else "#{hand2} wins!"
+    else "#{@hand2} wins!"
     end
   end
 

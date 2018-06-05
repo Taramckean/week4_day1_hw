@@ -8,27 +8,27 @@ class TestGame < Minitest::Test
   end
 
   def test_paper_wins()
-    assert_equal("Paper wins!",@game.play("Rock", "Paper"))
-    assert_equal("Paper wins!",@game.play("Paper", "Rock"))
+    assert_equal("paper wins!",@game.play("rock", "paper"))
+    assert_equal("paper wins!",@game.play("paper", "rock"))
 
   end
 
   def rock_wins()
-    assert_equal("Rock wins!",@game.play("Rock", "Scissors"))
-    assert_equal("Rock wins!",@game.play("Scissors", "Rock"))
+    assert_equal("rock wins!",@game.play("rock", "scissors"))
+    assert_equal("rock wins!",@game.play("scissors", "rock"))
   end
 
   def scissors_wins()
-    assert_equal("Scissors wins!",@game.play("Scissors", "Paper"))
-    assert_equal("Scissors wins!",@game.play("Paper", "Scissors"))
+    assert_equal("scissors wins!",@game.play("scissors", "paper"))
+    assert_equal("scissors wins!",@game.play("paper", "scissors"))
   end
 
   def test_draw
-    assert_equal("Draw",@game.play("Paper", "Paper"))
+    assert_equal("Draw",@game.play("paper", "paper"))
   end
 
   def test_wrong
-    assert_equal("NOOOOOOO wrong",@game.play("poo", "Scissors"))
+    assert_equal("NOOOOOOO wrong",@game.play("poo", "scissors"))
   end
 
 end
